@@ -1,0 +1,129 @@
+// ##########################
+// GENERAL STYLING
+.mainButton {
+  margin-top: 6px;
+  padding: 10px 22px;
+  background-color: #031927;
+  color: #80e38f;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  letter-spacing: 4px;
+  overflow: hidden;
+  transition: 0.5s;
+  cursor: pointer;
+  text-align: center;
+}
+
+.mainButton:hover {
+  border-color: black;
+  background: #80e38f;
+  color: #031927;
+  box-shadow: 0 0 5px #80e38f, 0 0 25px #80e38f, 0 0 50px #80e38f,
+    0 0 200px #80e38f;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+.smallButton {
+  text-decoration: none;
+  border-radius: 1px;
+  background-color: transparent;
+  color: #80e38f;
+  border: none;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.smallButton:hover {
+  color: black;
+  border-color: black;
+  background: #80e38f;
+  text-shadow: 0px 0px 30px #80e38f;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.outline {
+  border: 1px solid #ecf5de;
+}
+
+// ###################################
+// CATEGORY STYLING
+.createCategory {
+  h1 {
+    color: #80e38f;
+  }
+  color: #ecf5de;
+
+  row {
+    .dashboard {
+      background-color: #000;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .createCategory {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 32px;
+
+    .cat-list {
+      width: 90%;
+      margin-right: 30px;
+    }
+  }
+  .categoryForm {
+    width: 60vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    button {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+// #######################################
+// ADMIN MENU STYLING
+
+.sideBar {
+  width: 90%;
+  margin-right: 28px;
+  h4 {
+    color: #80e38f;
+  }
+}
+
+// #####################################
+// CREATE PRODUCT STYLING
+
+.createProduct {
+  h1 {
+    color: #80e38f;
+  }
+  color: #ecf5de;
+
+  .mainBox {
+    margin-top: 20px;
+  }
+
+  .ProdImg {
+    border: 2px dashed #80e38f;
+    border-radius: 20px;
+  }
+  input,
+  textarea {
+    background-color: #ecf5de;
+  }
+}
+
+// #########################
+// Product List styling
+
+.product-link {
+  text-decoration: none;
+}

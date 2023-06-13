@@ -1,0 +1,148 @@
+// ############################
+// ###### REGISTER PAGE STYLING
+.register {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  color: #80e38f;
+  // border: 2px solid red;
+
+  //   background-color: rgb(255, 226, 226);
+  form {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.8;
+
+    border: 1px solid #80e38f;
+    background-color: #031927;
+    border-radius: 12px;
+
+    padding: 20px 40px;
+
+    h1 {
+      margin-bottom: 30px;
+    }
+
+    input {
+      border: #80e38f solid 1px;
+      background: transparent;
+      &::placeholder {
+        color: #80e38f;
+      }
+      color: #ffffff !important;
+    }
+    input:focus {
+      background-color: #031927;
+      border-color: #80e38f;
+    }
+
+    .mainButton {
+      margin-top: 6px;
+      padding: 12px 25px;
+      background-color: #031927;
+      color: #80e38f;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      letter-spacing: 4px;
+      overflow: hidden;
+      transition: 0.5s;
+      cursor: pointer;
+    }
+
+    .mainButton:hover {
+      background: #80e38f;
+      color: #031927;
+      box-shadow: 0 0 5px #80e38f, 0 0 25px #80e38f, 0 0 50px #80e38f,
+        0 0 200px #80e38f;
+      -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+    }
+  }
+}
+
+// ###########################
+// ###### LOGIN PAGE STYLING
+
+.login {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  color: #80e38f;
+  // border: 2px solid red;
+
+  //   background-color: rgb(255, 226, 226);
+  form {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.8;
+
+    border: 1px solid #80e38f;
+    background-color: #031927;
+    border-radius: 12px;
+
+    padding: 20px 40px;
+
+    h1 {
+      margin-bottom: 30px;
+    }
+
+    input {
+      border: #80e38f solid 1px;
+      background: transparent;
+      &::placeholder {
+        color: #80e38f;
+      }
+      color: #ffffff !important;
+    }
+    input:focus {
+      background-color: #031927;
+      border-color: #80e38f;
+    }
+
+    .mainButton {
+      margin-top: 6px;
+      padding: 12px 25px;
+      background-color: #031927;
+      color: #80e38f;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      letter-spacing: 4px;
+      overflow: hidden;
+      transition: 0.5s;
+      cursor: pointer;
+    }
+
+    .mainButton:hover {
+      background: #80e38f;
+      color: #031927;
+      box-shadow: 0 0 5px #80e38f, 0 0 25px #80e38f, 0 0 50px #80e38f,
+        0 0 200px #80e38f;
+      -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+    }
+
+    .smallButton {
+      background-color: #031927;
+      color: #80e38f;
+      border: none;
+      margin-top: 10px;
+    }
+
+    .smallButton:hover {
+      color: #80e38f;
+      text-shadow: 0px 0px 30px #80e38f;
+      -moz-transition: all 0.2s ease-in;
+      -o-transition: all 0.2s ease-in;
+      -webkit-transition: all 0.2s ease-in;
+      transition: all 0.2s ease-in;
+    }
+  }
+}
