@@ -101,6 +101,7 @@ const Home = () => {
   // to get all categories in db
   const getAllCategories = async () => {
     try {
+      console.log(process.env.REACT_APP_API)
       const { data } = await axios.get(
         `${process.env.REACT_APP_API}/api/v1/category/all-categories`
       );

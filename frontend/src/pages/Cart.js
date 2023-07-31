@@ -157,7 +157,7 @@ const Cart = () => {
                       <div className="card-body text-start">
                         <h5 className="card-title">{el.name}</h5>
                         <p className="card-text">
-                          {el.description.substr(0, 100)}...
+                          {el.description.substr(0, 40)}...
                         </p>
                         <h5 className="card-text">$ {el.price}</h5>
                         <button
