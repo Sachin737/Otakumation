@@ -57,7 +57,9 @@ const Products = () => {
                         alt={el.name}
                         style={{
                           width: "100%",
-                          height: "15vw",
+                          width: "300px",
+                          maxHeight: "300px",
+                          height: "100%",
                           objectFit: "cover",
                         }}
                       />
@@ -69,7 +71,7 @@ const Products = () => {
                         <p className="card-text">
                           {el.description.substr(0, 40)}...
                         </p>
-                        <p className="card-text">$ {el.price}</p>
+                        <p className="card-text h5 text-success">$ {el.price}</p>
                       </div>
                     </div>
                   </Link>

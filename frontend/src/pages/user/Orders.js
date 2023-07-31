@@ -95,13 +95,13 @@ const Orders = () => {
                             </div>
                             <div className="col-3">
                               <div className="card-body text-start">
-                                {o.status === "Not Process" ? (
-                                  <h6 className="card-text text-primary">
-                                    {o?.status}
-                                  </h6>
-                                ) : (
+                                {o.status === "deliverd" ? (
                                   <h6 className="card-text text-success">
                                     ● {o?.status}
+                                  </h6>
+                                ) : (
+                                  <h6 className="card-text text-primary">
+                                    {o?.status}
                                   </h6>
                                 )}
                                 <h6>{moment(o?.createAt).fromNow()}</h6>

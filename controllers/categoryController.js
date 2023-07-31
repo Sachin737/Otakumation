@@ -46,8 +46,6 @@ const updateCategoryController = async (req, res) => {
     const { name } = req.body;
     const { id } = req.params;
 
-    // console.log(name);
-
     if (!name) {
       return res.status(401).send({
         success: false,

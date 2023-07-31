@@ -69,7 +69,7 @@ const Home = () => {
 
       setLoading(false);
       setProducts(data?.products);
-      // console.log(products);
+      
     } catch (err) {
       setLoading(false);
       console.log(err);
@@ -101,7 +101,6 @@ const Home = () => {
   // to get all categories in db
   const getAllCategories = async () => {
     try {
-      console.log(process.env.REACT_APP_API)
       const { data } = await axios.get(
         `${process.env.REACT_APP_API}/api/v1/category/all-categories`
       );
@@ -382,6 +381,7 @@ const Home = () => {
                     alt={el.name}
                     style={{
                       width: "100%",
+                      width: "300px",
                       maxHeight: "300px",
                       height: "100%",
                       objectFit: "cover",

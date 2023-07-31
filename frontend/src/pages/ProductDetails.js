@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import Layout from "../components/layouts/Layout";
 import axios from "axios";
+import toast from "react-hot-toast"
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { CartContext } from "../Context/cart";
+import { AuthContext } from "../Context/auth";
 
 const ProductDetails = () => {
   const navigate = useNavigate();
   const [similarProducts, setSimilarProducts] = useState([]);
   const [product, setProduct] = useState({});
+  const [cart, setCart] = useContext(CartContext);
+  const [auth, setAuth] = useContext(AuthContext);
   const params = useParams();
 
   // get single product
@@ -38,6 +43,29 @@ const ProductDetails = () => {
       setSimilarProducts(data?.products);
     } catch (err) {
       console.log(err);
+    }
+  };
+
+  // add product to cart
+  const handleCart = async (el) => {
+    try {
+      const headers = {
+        authorization: auth?.token,
+      };
+
+      const { data } = await axios.put(
+        `${process.env.REACT_APP_API}/api/v1/auth/update-cart`,
+        { el },
+        { headers }
+      );
+
+      setCart([...cart, el]);
+      localStorage.setItem("cart", JSON.stringify([...cart, el]));
+
+      toast.success("Product added to cart");
+    } catch (err) {
+      console.log(err);
+      toast.error("Failed to add product to cart");
     }
   };
 
@@ -92,7 +120,7 @@ const ProductDetails = () => {
           <h6>Description: {product?.description}</h6>
           <h4>Price: ${product?.price}</h4>
           <h6>Category: {product?.category?.name}</h6>
-          <button className="mainButton outline mt-3">Add to Cart</button>
+          <button className="mainButton outline mt-3" onClick={() => handleCart(product)}>Add to Cart</button>
         </div>
       </div>
 
@@ -144,7 +172,7 @@ const ProductDetails = () => {
                   >
                     See details
                   </button>
-                  <button className="btn btn-warning">Add to Cart</button>
+                  <button className="btn btn-warning" onClick={() => handleCart(el)}>Add to Cart</button>
                 </div>
               </div>
             </div>

@@ -290,7 +290,8 @@ const productsPageController = async (req, res) => {
       .find({})
       .select("-photo")
       .skip(perPage * (page - 1))
-      .limit(perPage);
+      .limit(perPage)
+      .sort({createdAt : -1});
 
     res.status(200).send({
       success: true,
