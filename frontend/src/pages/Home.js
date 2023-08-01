@@ -42,7 +42,7 @@ const Home = () => {
       );
       setCart(data?.cart);
     } catch (err) {
-      console.log(err);
+      //console.log(err);
     }
   };
 
@@ -54,7 +54,7 @@ const Home = () => {
       );
       setTotal(data?.totalCount);
     } catch (err) {
-      console.log(err);
+      //console.log(err);
     }
   };
 
@@ -72,7 +72,7 @@ const Home = () => {
       
     } catch (err) {
       setLoading(false);
-      console.log(err);
+      //console.log(err);
     }
   };
 
@@ -91,10 +91,10 @@ const Home = () => {
 
       setLoading(false);
 
-      // console.log(products);
+      // //console.log(products);
     } catch (err) {
       setLoading(false);
-      console.log(err);
+      //console.log(err);
     }
   };
 
@@ -110,14 +110,14 @@ const Home = () => {
         setCategories(data?.category);
       }
     } catch (err) {
-      console.log(err);
+      //console.log(err);
     }
   };
 
   // filter by category
   const handleFilter = async (value, id) => {
     let AllcheckCats = [...checked];
-    // console.log(id);
+    // //console.log(id);
     if (value) {
       AllcheckCats.push(id); // adding that category
     } else {
@@ -137,7 +137,7 @@ const Home = () => {
       setTotal(data?.prods?.length);
       setProducts(data?.prods);
     } catch (err) {
-      console.log(err);
+      //console.log(err);
     }
   };
 
@@ -159,8 +159,15 @@ const Home = () => {
 
       toast.success("Product added to cart");
     } catch (err) {
-      console.log(err);
-      toast.error("Failed to add product to cart");
+      //console.log(err);
+      if(err.response.status==401){
+        navigate(`/login`);
+        setTimeout(() => {
+          toast.error("Please login to use cart");
+        }, 500);
+      }else{
+        toast.error("Failed to add product to cart");
+      }
     }
   };
 

@@ -37,9 +37,9 @@ const AdminOrders = () => {
 
       setMyOrders(data);
 
-      console.log(data);
+      //console.log(data);
     } catch (err) {
-      console.log(err);
+      //console.log(err);
     }
   };
 
@@ -62,7 +62,7 @@ const AdminOrders = () => {
       );
       getMyOrders();
     } catch (err) {
-      console.log(err);
+      //console.log(err);
     }
   };
 

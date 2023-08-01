@@ -10,7 +10,7 @@ const PrivateRoute = () => {
   const [auth] = useContext(AuthContext);
   const [ok, setOk] = useState(false);
 
-  // console.log(auth.user);
+  // //console.log(auth.user);
 
   useEffect(() => {
     const checkUser = async () => {

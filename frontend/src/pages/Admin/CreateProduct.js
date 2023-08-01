@@ -29,14 +29,14 @@ const CreateProduct = () => {
       const { data } = await axios.get(
         `${process.env.REACT_APP_API}/api/v1/category/all-categories`
       );
-      // console.log(data);
+      // //console.log(data);
 
       if (data?.success) {
         data?.category?.reverse();
         setCategories(data?.category);
       }
     } catch (err) {
-      console.log(err);
+      //console.log(err);
       toast.error("Error in getting all categories!");
     }
   };
@@ -74,7 +74,7 @@ const CreateProduct = () => {
         toast.error(data?.message);
       }
     } catch (err) {
-      console.log(err);
+      //console.log(err);
       toast.error("something went wrong!");
     }
   };

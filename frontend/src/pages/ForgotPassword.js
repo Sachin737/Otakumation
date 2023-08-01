@@ -29,7 +29,7 @@ const ForgotPassword = () => {
         toast.error(res.data.message);
       }
     } catch (err) {
-      console.log(err);
+      //console.log(err);
       toast.error("Something went wrong!");
     }
   };

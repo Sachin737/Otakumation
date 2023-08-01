@@ -29,6 +29,7 @@ const Header = () => {
     setTimeout(() => {
       toast.success("Logout Successfully");
     }, 500);
+    window.location.reload();
   };
 
   return (

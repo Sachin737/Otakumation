@@ -7,7 +7,7 @@ import "../styles/CategoryStyles.scss";
 
 const Categories = () => {
   const categories = useCategory();
-  console.log(categories);
+  //console.log(categories);
 
   return (
     <Layout title={"All categories"}>

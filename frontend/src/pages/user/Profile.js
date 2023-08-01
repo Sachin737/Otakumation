@@ -47,7 +47,7 @@ const Profile = () => {
         toast.error(data.message);
       }
     } catch (err) {
-      console.log(err);
+      //console.log(err);
       toast.error("Something went wrong!");
     }
   };

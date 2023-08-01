@@ -18,11 +18,11 @@ const Searchbar = () => {
       );
 
       setSearchObj({ ...searchObj, results: data.products });
-      //   console.log(data);
+      //   //console.log(data);
 
       navigate("/search");
     } catch (err) {
-      console.log(err);
+      //console.log(err);
     }
   };
   return (

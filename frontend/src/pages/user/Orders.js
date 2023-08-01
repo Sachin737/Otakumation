@@ -24,9 +24,9 @@ const Orders = () => {
 
       setMyOrders(data);
 
-      // console.log(data);
+      // //console.log(data);
     } catch (err) {
-      console.log(err);
+      //console.log(err);
     }
   };
 

@@ -11,7 +11,7 @@ const useCategory = () => {
       );
       setCategories(data?.category);
     } catch (err) {
-      console.log(err);
+      //console.log(err);
     }
   };
 

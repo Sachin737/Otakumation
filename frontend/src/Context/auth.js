@@ -14,7 +14,7 @@ const AuthProvider = (props) => {
   // in local storage but not in out auth context
   useEffect(() => {
     let data = JSON.parse(localStorage.getItem("auth"));
-    // console.log(data?.token, "adfa");
+    // //console.log(data?.token, "adfa");
 
     if (data?.success) {
       setAuth({

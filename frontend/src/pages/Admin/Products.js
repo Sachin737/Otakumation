@@ -18,7 +18,7 @@ const Products = () => {
       );
       setProducts(data.products);
     } catch (err) {
-      console.log(err);
+      //console.log(err);
       toast.error("something went wrong!");
     }
   };

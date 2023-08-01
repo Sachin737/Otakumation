@@ -36,7 +36,7 @@ const Login = () => {
           token: data?.token,
         });
 
-        // console.log(auth.user.role);
+        // //console.log(auth.user.role);
 
         // saving data in local storage
         localStorage.setItem("auth", JSON.stringify(data));
@@ -58,7 +58,7 @@ const Login = () => {
         toast.error(data?.message);
       }
     } catch (err) {
-      console.log(err);
+      //console.log(err);
       toast.error("Something went wrong!");
     }
   };

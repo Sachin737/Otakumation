@@ -28,21 +28,21 @@ const ProductDetails = () => {
       // passed as args ? time to set prod state variable was higher than calling getsimilarProds func
       getSimilarProducts(data?.product?._id, data?.product?.category?._id);
     } catch (err) {
-      console.log(err);
+      //console.log(err);
     }
   };
 
   // get similar prods
   const getSimilarProducts = async (pid, cid) => {
     try {
-      // console.log(product?.category?._id, product?._id);
+      // //console.log(product?.category?._id, product?._id);
 
       const { data } = await axios.get(
         `${process.env.REACT_APP_API}/api/v1/products/similar-products/${pid}/${cid}`
       );
       setSimilarProducts(data?.products);
     } catch (err) {
-      console.log(err);
+      //console.log(err);
     }
   };
 
@@ -64,7 +64,7 @@ const ProductDetails = () => {
 
       toast.success("Product added to cart");
     } catch (err) {
-      console.log(err);
+      //console.log(err);
       toast.error("Failed to add product to cart");
     }
   };

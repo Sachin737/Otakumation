@@ -27,7 +27,7 @@ const ProductListByCategory = () => {
       setProducts(data?.products);
       setCategory(data?.category);
     } catch (err) {
-      console.log(err);
+      //console.log(err);
     }
   };
 
@@ -53,7 +53,7 @@ const ProductListByCategory = () => {
 
       toast.success("Product added to cart");
     } catch (err) {
-      console.log(err);
+      //console.log(err);
       toast.error("Failed to add product to cart");
     }
   };

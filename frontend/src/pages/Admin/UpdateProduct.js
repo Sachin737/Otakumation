@@ -39,7 +39,7 @@ const UpdateProduct = () => {
         setCategories(data?.category);
       }
     } catch (err) {
-      console.log(err);
+      //console.log(err);
       toast.error("Error in getting all categories!");
     }
   };
@@ -62,7 +62,7 @@ const UpdateProduct = () => {
       setShipping(data.product.shipping);
       setCategory(data.product.category._id);
     } catch (err) {
-      console.log(err);
+      //console.log(err);
       toast.error("Error in fetching product details");
     }
   };
@@ -104,7 +104,7 @@ const UpdateProduct = () => {
         toast.error(data?.message);
       }
     } catch (err) {
-      console.log(err);
+      //console.log(err);
       toast.error("something went wrong!");
     }
   };
@@ -130,7 +130,7 @@ const UpdateProduct = () => {
       }, 100);
       navigate("/dashboard/admin/products");
     } catch (err) {
-      console.log(err);
+      //console.log(err);
       toast.error("something went wring!");
     }
   };

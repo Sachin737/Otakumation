@@ -34,7 +34,7 @@ const Search = () => {
 
       toast.success("Product added to cart");
     } catch (err) {
-      console.log(err);
+      //console.log(err);
       toast.error("Failed to add product to cart");
     }
   };

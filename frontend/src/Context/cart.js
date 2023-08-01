@@ -14,7 +14,7 @@ const CartProvider = (props) => {
       const headers = {
         authorization: auth?.token,
       };
-      // console.log("fkk", headers);
+      // //console.log("fkk", headers);
 
       const { data } = await axios.get(
         `${process.env.REACT_APP_API}/api/v1/auth/user-cart`,
@@ -24,7 +24,7 @@ const CartProvider = (props) => {
       setCart(data?.cart);
       localStorage.setItem("cart", JSON.stringify(data?.cart));
     } catch (err) {
-      console.log(err);
+      //console.log(err);
     }
   };
   useEffect(() => {

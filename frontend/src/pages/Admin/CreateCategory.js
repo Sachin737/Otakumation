@@ -45,7 +45,7 @@ const CreateCategory = () => {
       }
     } catch (err) {
       toast.error("Oops! Error in input form");
-      console.log(err);
+      //console.log(err);
     }
   };
 
@@ -61,7 +61,7 @@ const CreateCategory = () => {
         setCategories(data.category);
       }
     } catch (err) {
-      console.log(err);
+      //console.log(err);
       toast.error("Error in getting all categories!");
     }
   };

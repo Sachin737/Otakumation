@@ -17,7 +17,7 @@ const Cart = () => {
   const [auth, setAuth] = useContext(AuthContext);
   const [cart, setCart] = useContext(CartContext);
 
-  // console.log(cart, auth.token);
+  // //console.log(cart, auth.token);
 
   const removeProd = async (el) => {
     try {
@@ -25,7 +25,7 @@ const Cart = () => {
         authorization: auth?.token,
       };
 
-      // console.log(headers);
+      // //console.log(headers);
       const { data } = await axios.put(
         `${process.env.REACT_APP_API}/api/v1/auth/remove-product/${el._id}`,
         {},
@@ -37,7 +37,7 @@ const Cart = () => {
 
       window.location.reload();
     } catch (err) {
-      console.log(err);
+      //console.log(err);
     }
   };
 
@@ -53,7 +53,7 @@ const Cart = () => {
         currency: "USD",
       });
     } catch (err) {
-      console.log(err);
+      //console.log(err);
     }
   };
 
@@ -63,10 +63,10 @@ const Cart = () => {
       const { data } = await axios.get(
         `${process.env.REACT_APP_API}/api/v1/payment/generate-token`
       );
-      // console.log(data?.response?.clientToken);
+      // //console.log(data?.response?.clientToken);
       setClientToken(data?.response?.clientToken);
     } catch (err) {
-      console.log(err);
+      //console.log(err);
     }
   };
 
@@ -108,7 +108,7 @@ const Cart = () => {
 
       navigate("/dashboard/user/orders");
     } catch (err) {
-      console.log(err);
+      //console.log(err);
       setLoading(false);
     }
   };
